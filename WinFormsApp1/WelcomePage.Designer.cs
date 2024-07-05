@@ -28,7 +28,18 @@
         /// </summary>
         private void InitializeComponent()
         {
+            welcomeLabel = new Label();
             SuspendLayout();
+            // 
+            // welcomeLabel
+            // 
+            welcomeLabel.AutoSize = true;
+            welcomeLabel.Font = new Font("Segoe UI", 12F, FontStyle.Bold);
+            welcomeLabel.Location = new Point(12, 9);
+            welcomeLabel.Name = "welcomeLabel";
+            welcomeLabel.Size = new Size(251, 21);
+            welcomeLabel.TabIndex = 0;
+            welcomeLabel.Text = "Welcome to Resource Solutions";
             // 
             // WelcomePage
             // 
@@ -36,11 +47,17 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.ButtonHighlight;
             ClientSize = new Size(800, 450);
+            Controls.Add(welcomeLabel);
             Name = "WelcomePage";
             Text = "Welcome Page";
             ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
+
+        private Label welcomeLabel;
+
+
     }
 }

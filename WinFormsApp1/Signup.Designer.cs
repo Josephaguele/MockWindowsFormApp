@@ -32,11 +32,13 @@
             label1 = new Label();
             label2 = new Label();
             label3 = new Label();
-            button1 = new Button();
-            richTextBox1 = new RichTextBox();
-            richTextBox2 = new RichTextBox();
+            signUpButton = new Button();
+            emailTextBox = new RichTextBox();
+            passwordTextBox = new RichTextBox();
             pictureBox1 = new PictureBox();
             fileSystemWatcher1 = new FileSystemWatcher();
+            label4 = new Label();
+            navigateToLoginPageButton = new Button();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)fileSystemWatcher1).BeginInit();
             SuspendLayout();
@@ -50,7 +52,6 @@
             label1.Size = new Size(185, 23);
             label1.TabIndex = 0;
             label1.Text = "Create an account";
-            label1.Click += label1_Click;
             // 
             // label2
             // 
@@ -73,43 +74,47 @@
             label3.Size = new Size(54, 13);
             label3.TabIndex = 3;
             label3.Text = "Password*";
-            label3.Click += label3_Click;
             // 
-            // button1
+            // signUpButton
             // 
-            button1.BackColor = Color.DeepSkyBlue;
-            button1.BackgroundImageLayout = ImageLayout.None;
-            button1.FlatAppearance.BorderColor = Color.DeepSkyBlue;
-            button1.FlatStyle = FlatStyle.Flat;
-            button1.Font = new Font("Arial", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            button1.ForeColor = SystemColors.ControlLightLight;
-            button1.Location = new Point(463, 246);
-            button1.Margin = new Padding(0);
-            button1.Name = "button1";
-            button1.Size = new Size(259, 30);
-            button1.TabIndex = 5;
-            button1.Text = "Sign Up";
-            button1.UseVisualStyleBackColor = false;
+            signUpButton.BackColor = Color.DeepSkyBlue;
+            signUpButton.BackgroundImageLayout = ImageLayout.None;
+            signUpButton.FlatAppearance.BorderColor = Color.DeepSkyBlue;
+            signUpButton.FlatAppearance.MouseOverBackColor = Color.Blue;
+            signUpButton.FlatStyle = FlatStyle.Flat;
+            signUpButton.Font = new Font("Arial", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            signUpButton.ForeColor = SystemColors.ControlLightLight;
+            signUpButton.Location = new Point(463, 246);
+            signUpButton.Margin = new Padding(0);
+            signUpButton.Name = "signUpButton";
+            signUpButton.Size = new Size(259, 30);
+            signUpButton.TabIndex = 5;
+            signUpButton.Text = "Sign Up";
+            signUpButton.UseVisualStyleBackColor = false;
+            signUpButton.Click += signUpButton_Click;
             // 
-            // richTextBox1
+            // emailTextBox
             // 
-            richTextBox1.BackColor = SystemColors.ButtonFace;
-            richTextBox1.BorderStyle = BorderStyle.None;
-            richTextBox1.Location = new Point(463, 135);
-            richTextBox1.Name = "richTextBox1";
-            richTextBox1.Size = new Size(259, 29);
-            richTextBox1.TabIndex = 6;
-            richTextBox1.Text = "";
+            emailTextBox.BackColor = SystemColors.ButtonFace;
+            emailTextBox.BorderStyle = BorderStyle.None;
+            emailTextBox.Location = new Point(463, 135);
+            emailTextBox.Name = "emailTextBox";
+            emailTextBox.Size = new Size(259, 29);
+            emailTextBox.TabIndex = 6;
+            emailTextBox.Text = "";
+
+            
             // 
-            // richTextBox2
+            // passwordTextBox
             // 
-            richTextBox2.BackColor = SystemColors.ButtonFace;
-            richTextBox2.BorderStyle = BorderStyle.None;
-            richTextBox2.Location = new Point(463, 197);
-            richTextBox2.Name = "richTextBox2";
-            richTextBox2.Size = new Size(259, 29);
-            richTextBox2.TabIndex = 7;
-            richTextBox2.Text = "";
+            passwordTextBox.BackColor = SystemColors.ButtonFace;
+            passwordTextBox.BorderStyle = BorderStyle.None;
+            passwordTextBox.Location = new Point(463, 197);
+            passwordTextBox.Name = "passwordTextBox";
+            passwordTextBox.Size = new Size(259, 29);
+            passwordTextBox.TabIndex = 7;
+            passwordTextBox.Text = "";
+            
             // 
             // pictureBox1
             // 
@@ -120,12 +125,37 @@
             pictureBox1.Size = new Size(420, 451);
             pictureBox1.TabIndex = 8;
             pictureBox1.TabStop = false;
-            pictureBox1.Click += pictureBox1_Click_1;
             // 
             // fileSystemWatcher1
             // 
             fileSystemWatcher1.EnableRaisingEvents = true;
             fileSystemWatcher1.SynchronizingObject = this;
+            // 
+            // label4
+            // 
+            label4.AutoSize = true;
+            label4.Font = new Font("Verdana", 9F, FontStyle.Bold);
+            label4.Location = new Point(476, 290);
+            label4.Name = "label4";
+            label4.Size = new Size(165, 14);
+            label4.TabIndex = 9;
+            label4.Text = "Already got an account?";
+            // 
+            // navigateToLoginPageButton
+            // 
+            navigateToLoginPageButton.BackColor = Color.Ivory;
+            navigateToLoginPageButton.FlatAppearance.BorderColor = Color.White;
+            navigateToLoginPageButton.FlatAppearance.BorderSize = 0;
+            navigateToLoginPageButton.FlatStyle = FlatStyle.Flat;
+            navigateToLoginPageButton.Font = new Font("Verdana", 9F, FontStyle.Bold);
+            navigateToLoginPageButton.ForeColor = Color.DeepSkyBlue;
+            navigateToLoginPageButton.Location = new Point(647, 286);
+            navigateToLoginPageButton.Name = "navigateToLoginPageButton";
+            navigateToLoginPageButton.Size = new Size(75, 23);
+            navigateToLoginPageButton.TabIndex = 10;
+            navigateToLoginPageButton.Text = "Log in";
+            navigateToLoginPageButton.UseVisualStyleBackColor = false;
+            navigateToLoginPageButton.Click += navigateToLoginPageButton_Click;
             // 
             // Signup
             // 
@@ -133,10 +163,12 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.ControlLightLight;
             ClientSize = new Size(800, 450);
+            Controls.Add(navigateToLoginPageButton);
+            Controls.Add(label4);
             Controls.Add(pictureBox1);
-            Controls.Add(richTextBox2);
-            Controls.Add(richTextBox1);
-            Controls.Add(button1);
+            Controls.Add(passwordTextBox);
+            Controls.Add(emailTextBox);
+            Controls.Add(signUpButton);
             Controls.Add(label3);
             Controls.Add(label2);
             Controls.Add(label1);
@@ -153,10 +185,12 @@
         private Label label1;
         private Label label2;
         private Label label3;
-        private Button button1;
-        private RichTextBox richTextBox1;
-        private RichTextBox richTextBox2;
+        private Button signUpButton;
+        private RichTextBox emailTextBox;
+        private RichTextBox passwordTextBox;
         private PictureBox pictureBox1;
         private FileSystemWatcher fileSystemWatcher1;
+        private Label label4;
+        private Button navigateToLoginPageButton;
     }
 }

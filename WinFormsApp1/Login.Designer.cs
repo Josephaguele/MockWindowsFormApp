@@ -29,9 +29,9 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Login));
-            richTextBox2 = new RichTextBox();
-            richTextBox1 = new RichTextBox();
-            button1 = new Button();
+            passwordTextBox = new RichTextBox();
+            emailTextBox = new RichTextBox();
+            signInButton = new Button();
             label3 = new Label();
             label2 = new Label();
             label1 = new Label();
@@ -39,42 +39,42 @@
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
             // 
-            // richTextBox2
+            // passwordTextBox
             // 
-            richTextBox2.BackColor = SystemColors.ButtonFace;
-            richTextBox2.BorderStyle = BorderStyle.None;
-            richTextBox2.Location = new Point(446, 201);
-            richTextBox2.Name = "richTextBox2";
-            richTextBox2.Size = new Size(259, 29);
-            richTextBox2.TabIndex = 13;
-            richTextBox2.Text = "";
-            richTextBox2.TextChanged += richTextBox2_TextChanged;
+            passwordTextBox.BackColor = SystemColors.ButtonFace;
+            passwordTextBox.BorderStyle = BorderStyle.None;
+            passwordTextBox.Location = new Point(446, 201);
+            passwordTextBox.Name = "passwordTextBox";
+            passwordTextBox.Size = new Size(259, 29);
+            passwordTextBox.TabIndex = 13;
+            passwordTextBox.Text = "";
             // 
-            // richTextBox1
+            // emailTextBox
             // 
-            richTextBox1.BackColor = SystemColors.ButtonFace;
-            richTextBox1.BorderStyle = BorderStyle.None;
-            richTextBox1.Location = new Point(446, 139);
-            richTextBox1.Name = "richTextBox1";
-            richTextBox1.Size = new Size(259, 29);
-            richTextBox1.TabIndex = 12;
-            richTextBox1.Text = "";
+            emailTextBox.BackColor = SystemColors.ButtonFace;
+            emailTextBox.BorderStyle = BorderStyle.None;
+            emailTextBox.Location = new Point(446, 139);
+            emailTextBox.Name = "emailTextBox";
+            emailTextBox.Size = new Size(259, 29);
+            emailTextBox.TabIndex = 12;
+            emailTextBox.Text = "";
             // 
-            // button1
+            // signInButton
             // 
-            button1.BackColor = Color.DeepSkyBlue;
-            button1.BackgroundImageLayout = ImageLayout.None;
-            button1.FlatAppearance.BorderColor = Color.DeepSkyBlue;
-            button1.FlatStyle = FlatStyle.Flat;
-            button1.Font = new Font("Arial", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            button1.ForeColor = SystemColors.ControlLightLight;
-            button1.Location = new Point(446, 250);
-            button1.Margin = new Padding(0);
-            button1.Name = "button1";
-            button1.Size = new Size(259, 30);
-            button1.TabIndex = 11;
-            button1.Text = "Sign In";
-            button1.UseVisualStyleBackColor = false;
+            signInButton.BackColor = Color.DeepSkyBlue;
+            signInButton.BackgroundImageLayout = ImageLayout.None;
+            signInButton.FlatAppearance.BorderColor = Color.DeepSkyBlue;
+            signInButton.FlatStyle = FlatStyle.Flat;
+            signInButton.Font = new Font("Arial", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            signInButton.ForeColor = SystemColors.ControlLightLight;
+            signInButton.Location = new Point(446, 250);
+            signInButton.Margin = new Padding(0);
+            signInButton.Name = "signInButton";
+            signInButton.Size = new Size(259, 30);
+            signInButton.TabIndex = 11;
+            signInButton.Text = "Sign In";
+            signInButton.UseVisualStyleBackColor = false;
+            signInButton.Click += signInButton_Click;
             // 
             // label3
             // 
@@ -124,9 +124,9 @@
             BackColor = SystemColors.ButtonHighlight;
             ClientSize = new Size(800, 450);
             Controls.Add(pictureBox1);
-            Controls.Add(richTextBox2);
-            Controls.Add(richTextBox1);
-            Controls.Add(button1);
+            Controls.Add(passwordTextBox);
+            Controls.Add(emailTextBox);
+            Controls.Add(signInButton);
             Controls.Add(label3);
             Controls.Add(label2);
             Controls.Add(label1);
@@ -139,9 +139,9 @@
 
         #endregion
 
-        private RichTextBox richTextBox2;
-        private RichTextBox richTextBox1;
-        private Button button1;
+        private RichTextBox passwordTextBox;
+        private RichTextBox emailTextBox;
+        private Button signInButton;
         private Label label3;
         private Label label2;
         private Label label1;
